@@ -2,25 +2,233 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #15132b;
+
+  /* Dotty Doe brand palette — extracted from the source Canva deck */
+  --dd-ink: #15132b;
+  --dd-ink-soft: #4a4768;
+  --dd-purple: #6c4fe0;
+  --dd-purple-deep: #4527a8;
+  --dd-lavender: #c9bdfb;
+  --dd-lavender-soft: #ece7fd;
+  --dd-blue: #4fb8e0;
+  --dd-teal: #63e0c7;
+  --dd-pink: #f26fb2;
+  --dd-pink-soft: #fcd9ea;
+  --dd-grey-bg: #f6f4fc;
+  --dd-grey-line: #e7e3f5;
+  --dd-white: #ffffff;
+
+  --dd-gradient-brand: linear-gradient(
+    120deg,
+    var(--dd-purple) 0%,
+    #6b8fe8 45%,
+    var(--dd-blue) 70%,
+    var(--dd-teal) 100%
+  );
+  --dd-gradient-bubble: linear-gradient(
+    135deg,
+    var(--dd-pink) 0%,
+    var(--dd-pink-soft) 100%
+  );
+  --dd-gradient-ink: linear-gradient(
+    180deg,
+    var(--dd-ink) 0%,
+    var(--dd-purple-deep) 100%
+  );
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-ink: var(--dd-ink);
+  --color-ink-soft: var(--dd-ink-soft);
+  --color-purple: var(--dd-purple);
+  --color-purple-deep: var(--dd-purple-deep);
+  --color-lavender: var(--dd-lavender);
+  --color-lavender-soft: var(--dd-lavender-soft);
+  --color-blue: var(--dd-blue);
+  --color-teal: var(--dd-teal);
+  --color-pink: var(--dd-pink);
+  --color-pink-soft: var(--dd-pink-soft);
+  --color-grey-bg: var(--dd-grey-bg);
+  --color-grey-line: var(--dd-grey-line);
+
+  --font-display: var(--font-bricolage);
+  --font-sans: var(--font-inter);
+  --font-logo: var(--font-quicksand);
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 42s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 11s ease-in-out infinite;
+  --animate-blob: blob 16s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes marquee-reverse {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-18px) rotate(2deg);
+    }
+  }
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes blob {
+    0%,
+    100% {
+      border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
+    }
+    34% {
+      border-radius: 60% 40% 35% 65% / 55% 65% 35% 45%;
+    }
+    67% {
+      border-radius: 35% 65% 55% 45% / 40% 55% 45% 60%;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #15132b;
   }
+}
+
+* {
+  scrollbar-color: var(--dd-purple) var(--dd-grey-bg);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--dd-purple);
+  color: var(--dd-white);
+}
+
+/* Utilities */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-logo {
+  font-family: var(--font-logo);
+}
+
+.text-gradient-brand {
+  background: var(--dd-gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gradient-brand {
+  background: var(--dd-gradient-brand);
+}
+
+.bg-gradient-bubble {
+  background: var(--dd-gradient-bubble);
+}
+
+.bg-noise {
+  position: relative;
+}
+
+.bg-noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.mask-fade-edges {
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: var(--animate-marquee);
+}
+
+.marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: var(--animate-marquee-reverse);
+}
+
+.marquee-group:hover .marquee-track,
+.marquee-group:hover .marquee-track-reverse {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
