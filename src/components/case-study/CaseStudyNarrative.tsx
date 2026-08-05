@@ -11,7 +11,7 @@ const rows: { label: string; key: keyof CaseStudy }[] = [
 
 export function CaseStudyNarrative({ study }: { study: CaseStudy }) {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-white py-14 md:py-20 lg:py-28">
       <Container>
         <div className="flex flex-col divide-y divide-grey-line border-y border-grey-line">
           {rows.map((row, i) => (

@@ -9,7 +9,7 @@ const rowTwo = clients.slice(10);
 
 function LogoTile({ client }: { client: (typeof clients)[number] }) {
   return (
-    <div className="mx-4 flex h-24 w-40 shrink-0 items-center justify-center rounded-2xl border border-grey-line bg-white px-6 py-4 grayscale transition-all duration-300 hover:grayscale-0 md:mx-6 md:h-28 md:w-48">
+    <div className="mx-3 flex h-16 w-28 shrink-0 items-center justify-center rounded-xl border border-grey-line bg-white px-4 py-3 grayscale transition-all duration-300 hover:grayscale-0 sm:h-20 sm:w-32 md:mx-6 md:h-28 md:w-48 md:rounded-2xl md:px-6 md:py-4">
       <div className="relative h-full w-full">
         <Image
           src={client.logo}
@@ -25,7 +25,7 @@ function LogoTile({ client }: { client: (typeof clients)[number] }) {
 
 export function TrustedBy() {
   return (
-    <section id="trusted-by" className="border-y border-grey-line bg-grey-bg py-20 md:py-28">
+    <section id="trusted-by" className="border-y border-grey-line bg-grey-bg py-14 md:py-20 lg:py-28">
       <Container>
         <FadeUp className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-purple">

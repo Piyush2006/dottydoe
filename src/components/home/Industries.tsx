@@ -7,7 +7,7 @@ import { industries } from "@/lib/data";
 
 export function Industries() {
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section className="bg-white py-16 md:py-24 lg:py-32">
       <Container>
         <SectionHeading
           eyebrow="Industries"
@@ -21,7 +21,7 @@ export function Industries() {
               key={industry.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
               className="group rounded-3xl border border-grey-line bg-grey-bg p-8 transition-colors duration-300 hover:bg-lavender-soft md:p-10"
             >

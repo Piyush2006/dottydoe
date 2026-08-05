@@ -4,7 +4,7 @@ import { DeerMascot } from "@/components/deer/DeerMascot";
 
 export function AboutStory() {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-white py-14 md:py-20 lg:py-28">
       <Container>
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
           <div>

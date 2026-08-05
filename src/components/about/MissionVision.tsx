@@ -23,7 +23,7 @@ const cards = [
 
 export function MissionVision() {
   return (
-    <section className="bg-grey-bg py-20 md:py-28">
+    <section className="bg-grey-bg py-14 md:py-20 lg:py-28">
       <Container>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {cards.map((card, i) => (
@@ -31,7 +31,7 @@ export function MissionVision() {
               key={card.label}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="rounded-3xl border border-grey-line bg-white p-8 md:p-10"
             >

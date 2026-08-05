@@ -8,7 +8,7 @@ import { impactHighlights } from "@/lib/data";
 
 export function Testimonials() {
   return (
-    <section className="bg-grey-bg py-24 md:py-32">
+    <section className="bg-grey-bg py-16 md:py-24 lg:py-32">
       <Container>
         <SectionHeading
           eyebrow="Results, not testimonials"
@@ -22,7 +22,7 @@ export function Testimonials() {
               key={item.campaign}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               className="flex w-[280px] shrink-0 snap-start flex-col justify-between rounded-3xl border border-grey-line bg-white p-7 lg:w-auto"
             >

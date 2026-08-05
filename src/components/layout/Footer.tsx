@@ -24,7 +24,7 @@ export function Footer() {
         />
       </div>
 
-      <Container className="relative py-20 md:py-28">
+      <Container className="relative py-14 md:py-20 lg:py-28">
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-[1.4fr_0.7fr_0.7fr_1fr]">
           <div className="max-w-md">
             <Link href="/" className="font-logo text-3xl font-semibold text-white">

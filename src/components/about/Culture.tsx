@@ -7,7 +7,7 @@ import { cultureValues } from "@/lib/data";
 
 export function Culture() {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-white py-14 md:py-20 lg:py-28">
       <Container>
         <SectionHeading
           eyebrow="Culture"
@@ -21,7 +21,7 @@ export function Culture() {
               key={value.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               className="bg-white p-8 md:p-10"
             >

@@ -29,7 +29,7 @@ export default function ContactPage() {
         description="Tell us about your business, your goals, and your timeline — we'll come back with next steps, not a boilerplate pitch."
       />
 
-      <section className="bg-white pb-24 md:pb-32">
+      <section className="bg-white pb-16 md:pb-24 lg:pb-32">
         <Container>
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_0.7fr]">
             <FadeUp>

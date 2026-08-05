@@ -7,7 +7,7 @@ import type { CaseStudy } from "@/lib/data";
 
 export function CaseStudyHero({ study }: { study: CaseStudy }) {
   return (
-    <section className="relative overflow-hidden bg-white pb-0 pt-32 md:pt-40">
+    <section className="relative overflow-hidden bg-white pb-0 pt-24 md:pt-40">
       <Container>
         <FadeUp>
           <Link

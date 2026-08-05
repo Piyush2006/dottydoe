@@ -30,7 +30,7 @@ export function AnimatedCounter({
   duration?: number;
 }) {
   const ref = React.useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.6 });
+  const isInView = useInView(ref, { once: true, amount: 0.4, margin: "0px 0px -60px 0px" });
   const parsed = parseValue(value);
   const useCommas = parsed ? value.replace(/[^\d,]/g, "").includes(",") : false;
 

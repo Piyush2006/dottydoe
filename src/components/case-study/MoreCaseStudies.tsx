@@ -10,7 +10,7 @@ export function MoreCaseStudies({ currentSlug }: { currentSlug: string }) {
   const others = caseStudies.filter((s) => s.slug !== currentSlug);
 
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-white py-14 md:py-20 lg:py-28">
       <Container>
         <SectionHeading eyebrow="Keep exploring" title="More case studies." />
 

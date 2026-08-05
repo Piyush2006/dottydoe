@@ -13,7 +13,7 @@ const featured = workItems.slice(0, 5);
 
 export function FeaturedWork() {
   return (
-    <section className="bg-grey-bg py-24 md:py-32">
+    <section className="bg-grey-bg py-16 md:py-24 lg:py-32">
       <Container>
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <SectionHeading
@@ -38,7 +38,7 @@ export function FeaturedWork() {
               key={item.title}
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
               transition={{ duration: 0.7, delay: (i % 2) * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className={item.size === "large" ? "md:col-span-2" : ""}
             >

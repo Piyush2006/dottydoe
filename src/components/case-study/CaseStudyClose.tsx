@@ -14,7 +14,7 @@ const closeRows: { label: string; key: "results" | "businessImpact" | "lessonsLe
 
 export function CaseStudyClose({ study }: { study: CaseStudy }) {
   return (
-    <section className="bg-ink py-20 text-white md:py-28">
+    <section className="bg-ink py-14 text-white md:py-20 lg:py-28">
       <Container>
         <SectionHeading eyebrow="The outcome" title="Where it landed." dark />
 

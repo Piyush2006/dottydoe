@@ -11,7 +11,7 @@ import { caseStudies } from "@/lib/data";
 
 export function CaseStudiesPreview() {
   return (
-    <section className="bg-ink py-24 text-white md:py-32">
+    <section className="bg-ink py-16 text-white md:py-24 lg:py-32">
       <Container>
         <SectionHeading
           eyebrow="Case studies"
@@ -26,7 +26,7 @@ export function CaseStudiesPreview() {
               key={study.slug}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
               transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
             >
               <Link
@@ -36,13 +36,13 @@ export function CaseStudiesPreview() {
               >
                 <div className="order-2 md:order-1">
                   <div className="flex items-center gap-3">
-                    <span className="relative h-8 w-14 shrink-0">
+                    <span className="relative flex h-8 w-16 shrink-0 items-center rounded-lg bg-white px-2 py-1">
                       <Image
                         src={study.clientLogo}
                         alt={study.client}
                         fill
-                        sizes="56px"
-                        className="object-contain object-left brightness-0 invert"
+                        sizes="64px"
+                        className="object-contain p-1"
                       />
                     </span>
                     <span className="text-xs font-semibold uppercase tracking-[0.1em] text-white/50">

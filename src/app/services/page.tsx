@@ -24,7 +24,7 @@ export default function ServicesPage() {
         description="From the first line of brand strategy to the last frame of a Gen AI film — we connect the dots so nothing gets lost between teams."
       />
 
-      <section className="bg-white pb-24 md:pb-32">
+      <section className="bg-white pb-16 md:pb-24 lg:pb-32">
         <Container>
           <div className="flex flex-col divide-y divide-grey-line border-t border-grey-line">
             {services.map((service, i) => (

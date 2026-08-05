@@ -11,7 +11,7 @@ import { DeerMascot } from "@/components/deer/DeerMascot";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-32 pb-16 md:pt-40 md:pb-24">
+    <section className="relative overflow-hidden bg-white pt-28 pb-12 md:pt-40 md:pb-24">
       <div
         aria-hidden="true"
         className="animate-blob absolute -left-32 top-10 h-[420px] w-[420px] bg-gradient-brand opacity-[0.16] blur-3xl"
@@ -22,7 +22,7 @@ export function Hero() {
       />
 
       <Container className="relative">
-        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="grid grid-cols-1 items-center gap-10 md:gap-16 lg:grid-cols-[1.15fr_0.85fr]">
           <div>
             <FadeUp>
               <span className="inline-flex items-center gap-2 rounded-full border border-purple/15 bg-lavender-soft px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-purple">
@@ -66,7 +66,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-            className="relative mx-auto aspect-[3/4] w-full max-w-md"
+            className="relative mx-auto aspect-[3/4] w-full max-w-[260px] sm:max-w-sm md:max-w-md"
           >
             <div className="animate-float-slow h-full w-full">
               <DeerMascot priority sizes="(max-width: 1024px) 70vw, 420px" className="h-full w-full" />
@@ -74,7 +74,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <FadeUp delay={0.9} className="mt-20 flex justify-center lg:mt-28">
+        <FadeUp delay={0.9} className="mt-10 hidden justify-center sm:flex md:mt-16 lg:mt-20">
           <a
             href="#trusted-by"
             className="group flex flex-col items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-ink-soft transition-colors hover:text-purple"

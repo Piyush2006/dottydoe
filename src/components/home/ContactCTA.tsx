@@ -11,7 +11,7 @@ import { DeerMascot } from "@/components/deer/DeerMascot";
 
 export function ContactCTA() {
   return (
-    <section className="relative overflow-hidden bg-ink py-24 text-white md:py-32">
+    <section className="relative overflow-hidden bg-ink py-16 text-white md:py-24 lg:py-32">
       <div className="pointer-events-none absolute -right-16 bottom-0 h-[340px] w-[340px] opacity-20 md:h-[460px] md:w-[460px]">
         <DeerMascot />
       </div>

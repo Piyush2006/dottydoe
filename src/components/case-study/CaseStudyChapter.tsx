@@ -16,7 +16,7 @@ export function CaseStudyChapter({
   tinted?: boolean;
 }) {
   return (
-    <section className={cn("py-20 md:py-28", tinted ? "bg-grey-bg" : "bg-white")}>
+    <section className={cn("py-14 md:py-20 lg:py-28", tinted ? "bg-grey-bg" : "bg-white")}>
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.45fr_0.55fr] lg:gap-16">
           <div>

@@ -14,7 +14,7 @@ export function PageHero({
   className?: string;
 }) {
   return (
-    <section className={cn("relative overflow-hidden bg-white pb-16 pt-36 md:pb-24 md:pt-44", className)}>
+    <section className={cn("relative overflow-hidden bg-white pb-12 pt-28 md:pb-24 md:pt-44", className)}>
       <div
         aria-hidden="true"
         className="animate-blob pointer-events-none absolute -right-32 top-0 h-[380px] w-[380px] bg-gradient-brand opacity-[0.14] blur-3xl"

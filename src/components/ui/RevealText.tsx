@@ -41,21 +41,18 @@ export function RevealText({
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once, amount: 0.6 }}
+        viewport={{ once, amount: 0.4, margin: "0px 0px -80px 0px" }}
         transition={{ delayChildren: delay }}
       >
         {words.map((w, i) => (
-          <span
-            key={i}
-            className={cn(
-              "inline-block overflow-hidden pb-[0.1em] align-bottom",
-              i !== words.length - 1 && "mr-[0.28em]"
-            )}
-          >
-            <motion.span variants={word} className="inline-block">
-              {w}
-            </motion.span>
-          </span>
+          <React.Fragment key={i}>
+            <span className="inline-block overflow-hidden pb-[0.1em] align-bottom">
+              <motion.span variants={word} className="inline-block">
+                {w}
+              </motion.span>
+            </span>
+            {i !== words.length - 1 ? " " : ""}
+          </React.Fragment>
         ))}
       </motion.span>
     </Tag>
@@ -79,7 +76,7 @@ export function FadeUp({
     <motion.div
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once, amount: 0.3 }}
+      viewport={{ once, amount: 0.2, margin: "0px 0px -80px 0px" }}
       transition={{ duration: 0.75, delay, ease: [0.16, 1, 0.3, 1] }}
       className={className}
     >

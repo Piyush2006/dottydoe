@@ -11,7 +11,7 @@ const icons = [Layers, Sparkles, Rocket, LineChart];
 
 export function WhyDottyDoe() {
   return (
-    <section className="relative overflow-hidden bg-white py-24 md:py-32">
+    <section className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
       <Container>
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative mx-auto aspect-square w-full max-w-sm lg:mx-0">
@@ -37,7 +37,7 @@ export function WhyDottyDoe() {
                     key={point.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.4 }}
+                    viewport={{ once: true, amount: 0.2, margin: "0px 0px -60px 0px" }}
                     transition={{ duration: 0.6, delay: i * 0.08 }}
                     className="flex flex-col gap-3"
                   >
