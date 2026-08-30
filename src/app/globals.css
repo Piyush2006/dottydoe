@@ -223,9 +223,9 @@ body {
 .dd-bubble,
 .dd-bubble-ring {
   position: absolute;
-  left: 38.3%;
-  top: 67.6%;
-  width: 25.5%;
+  left: 32.4%;
+  top: 63.8%;
+  width: 27%;
   aspect-ratio: 1;
   border-radius: 50%;
   transform-origin: 78% 18%;
@@ -255,11 +255,11 @@ body {
 
 .dd-bubble-bit {
   position: absolute;
-  left: 38.3%;
-  top: 67.6%;
-  width: 4.4%;
+  left: 32.4%;
+  top: 63.8%;
+  width: 4.8%;
   aspect-ratio: 1;
-  margin: -2.2% 0 0 -2.2%;
+  margin: -2.4% 0 0 -2.4%;
   border-radius: 50%;
   background: radial-gradient(circle at 38% 34%, #ffffff 0%, #f0b2da 55%, #d98fc9 100%);
   box-shadow: 0 4px 12px rgba(214, 137, 201, 0.35);

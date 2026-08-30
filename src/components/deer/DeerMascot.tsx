@@ -20,9 +20,9 @@ export function DeerMascot({
   bubbleDelay?: string;
 }) {
   return (
-    <div className={cn("relative aspect-[1240/1754] w-full", className)}>
+    <div className={cn("relative aspect-[1128/1214] w-full", className)}>
       <Image
-        src="/assets/logo/deer-mascot.png"
+        src="/assets/logo/deer-mascot-tight.png"
         alt="Dotty Doe mascot — a pop-art deer in pink sunglasses blowing a bubblegum bubble"
         fill
         priority={priority}
