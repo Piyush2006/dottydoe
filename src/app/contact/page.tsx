@@ -47,8 +47,8 @@ export default function ContactPage() {
             </FadeUp>
 
             <FadeUp delay={0.15} className="flex flex-col gap-10">
-              <div className="relative mx-auto aspect-[4/3] w-full max-w-xs lg:mx-0">
-                <DeerMascot sizes="320px" />
+              <div className="relative mx-auto w-full max-w-[220px] lg:mx-0">
+                <DeerMascot sizes="220px" bubbleDelay="-1.2s" />
               </div>
 
               <div className="flex flex-col gap-4">

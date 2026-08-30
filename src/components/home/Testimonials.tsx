@@ -8,12 +8,12 @@ import { impactHighlights } from "@/lib/data";
 
 export function Testimonials() {
   return (
-    <section className="bg-grey-bg py-16 md:py-24 lg:py-32">
+    <section className="bg-white py-16 md:py-24 lg:py-32">
       <Container>
         <SectionHeading
           eyebrow="Results, not testimonials"
           title="We'll let the numbers speak instead."
-          description="Every campaign closes with proof — impressions, reach, completion rates, engagement. Here's a sample."
+          description="Impressions, reach, completion rates, engagement — pulled straight from the campaigns above."
         />
 
         <div className="mt-16 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 lg:grid lg:grid-cols-4 lg:overflow-visible">

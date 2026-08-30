@@ -106,7 +106,7 @@ export function Footer() {
         </div>
 
         <div className="mt-20 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Dotty Doe. Strategy. Story. Screens.</p>
+          <p>© {new Date().getFullYear()} Dotty Doe. Strategy. Story. Scale.</p>
           <p>Anything &amp; everything creative.</p>
         </div>
       </Container>

@@ -20,18 +20,20 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
         </FadeUp>
 
         <div className="mt-8 flex flex-col gap-6 md:mt-10">
-          <FadeUp delay={0.1} className="flex items-center gap-4">
-            <span className="relative h-10 w-20 shrink-0">
-              <Image
-                src={study.clientLogo}
-                alt={study.client}
-                fill
-                sizes="80px"
-                className="object-contain object-left"
-              />
+          <FadeUp delay={0.1} className="flex flex-wrap items-center gap-x-5 gap-y-4">
+            <span className="inline-flex h-20 items-center justify-center rounded-2xl border border-grey-line bg-white px-6 shadow-[0_12px_40px_rgba(76,39,168,0.1)] md:h-24 md:px-7">
+              <span className="relative h-12 w-36 md:h-14 md:w-44">
+                <Image
+                  src={study.clientLogo}
+                  alt={study.client}
+                  fill
+                  sizes="180px"
+                  className="object-contain"
+                  priority
+                />
+              </span>
             </span>
-            <span className="h-5 w-px bg-ink/15" />
-            <span className="text-sm font-semibold uppercase tracking-[0.1em] text-purple">
+            <span className="inline-flex items-center rounded-full border border-purple/20 bg-lavender-soft px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-purple">
               {study.category}
             </span>
           </FadeUp>

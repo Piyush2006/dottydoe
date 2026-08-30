@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { caseStudies } from "@/lib/data";
 import { CaseStudyHero } from "@/components/case-study/CaseStudyHero";
+import { CaseStudyCampaigns } from "@/components/case-study/CaseStudyCampaigns";
 import { CaseStudyNarrative } from "@/components/case-study/CaseStudyNarrative";
 import { CaseStudyChapter } from "@/components/case-study/CaseStudyChapter";
 import { CaseStudyClose } from "@/components/case-study/CaseStudyClose";
@@ -37,6 +38,7 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
   return (
     <>
       <CaseStudyHero study={study} />
+      <CaseStudyCampaigns study={study} />
       <CaseStudyNarrative study={study} />
       {study.chapters.map((chapter, i) => (
         <CaseStudyChapter key={chapter.title} chapter={chapter} index={i} tinted={i % 2 === 1} />

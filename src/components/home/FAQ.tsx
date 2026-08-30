@@ -10,7 +10,7 @@ import { faqs } from "@/lib/data";
 
 export function FAQ() {
   return (
-    <section className="bg-white py-16 md:py-24 lg:py-32">
+    <section className="bg-grey-bg py-16 md:py-24 lg:py-32">
       <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <SectionHeading

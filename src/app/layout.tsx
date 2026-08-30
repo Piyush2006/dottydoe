@@ -28,7 +28,7 @@ const quicksand = Quicksand({
 export const metadata: Metadata = {
   metadataBase: new URL("https://dottydoe.com"),
   title: {
-    default: "Dotty Doe — Strategy. Story. Screens.",
+    default: "Dotty Doe — Strategy. Story. Scale.",
     template: "%s — Dotty Doe",
   },
   description:
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "advertising agency India",
   ],
   openGraph: {
-    title: "Dotty Doe — Strategy. Story. Screens.",
+    title: "Dotty Doe — Strategy. Story. Scale.",
     description:
       "Connect the dots between marketing strategies, brand stories, creative design and everything digital.",
     type: "website",

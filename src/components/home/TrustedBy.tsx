@@ -25,15 +25,15 @@ function LogoTile({ client }: { client: (typeof clients)[number] }) {
 
 export function TrustedBy() {
   return (
-    <section id="trusted-by" className="border-y border-grey-line bg-grey-bg py-14 md:py-20 lg:py-28">
+    <section id="trusted-by" className="scroll-mt-24 border-y border-grey-line bg-grey-bg py-14 md:py-20 lg:py-28">
       <Container>
-        <FadeUp className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-purple">
+        <FadeUp className="mx-auto max-w-4xl text-center">
+          <h2 className="font-display text-4xl leading-[1.05] tracking-tight text-ink text-balance sm:text-5xl lg:text-6xl">
             Brands we collaborated with
-          </p>
-          <h2 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-4xl">
-            Brands brave enough to not follow the herd.
           </h2>
+          <p className="mt-3 text-base leading-relaxed text-ink-soft">
+            Brands brave enough to not follow the herd.
+          </p>
         </FadeUp>
       </Container>
 

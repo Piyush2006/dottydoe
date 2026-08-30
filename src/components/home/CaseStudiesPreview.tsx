@@ -7,18 +7,30 @@ import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
+import { FadeUp } from "@/components/ui/RevealText";
 import { caseStudies } from "@/lib/data";
 
 export function CaseStudiesPreview() {
   return (
     <section className="bg-ink py-16 text-white md:py-24 lg:py-32">
       <Container>
-        <SectionHeading
-          eyebrow="Case studies"
-          title="A few times we made brands noticeably smarter."
-          description="Full breakdowns — challenge, strategy, creative, execution and the numbers that followed."
-          dark
-        />
+        <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
+          <SectionHeading
+            eyebrow="Selected work"
+            title="Campaigns, from brief to numbers."
+            description="Three we can talk about — the challenge, the idea, the rollout and what it delivered."
+            dark
+          />
+          <FadeUp delay={0.2}>
+            <Link
+              href="/work"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink"
+            >
+              View all work
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          </FadeUp>
+        </div>
 
         <div className="mt-16 flex flex-col gap-6">
           {caseStudies.map((study, i) => (
